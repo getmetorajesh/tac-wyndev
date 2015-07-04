@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/u', function()
+{
+  //change our view name to the view we created in a previous step
+  return View::make('app');
+});
+
+Route::resource('tac', 'TacController');
