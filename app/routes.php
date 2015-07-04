@@ -22,4 +22,7 @@ Route::get('/u', function()
   return View::make('app');
 });
 
+Route::get('tacProfile', 'TacController@indexNew');
+
+
 Route::resource('tac', 'TacController');

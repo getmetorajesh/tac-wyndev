@@ -193,6 +193,9 @@
     <script type="text/javascript" src="{{ asset('bower_components/backbone.paginator/lib/backbone.paginator.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bower_components/bootstrap3-datepicker/js/bootstrap-datepicker.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bower_components/moment/min/moment.min.js') }}"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/chroma-js/0.5.9/chroma.min.js"></script>
+ <script src="http://d3js.org/topojson.v1.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/dummy-data.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bower_components/leaflet/dist/leaflet.js') }}"></script>
     <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>

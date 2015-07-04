@@ -9,8 +9,37 @@ class TacController extends \BaseController {
 	 */
 	public function index()
 	{
-			
+		$input = Input::only('gender', 'age_group');
+		//dd($input);
+		$query = DB::table('tac')
+							->select(DB::raw('count(*) as fatality_count, region'));
+		if($input['gender']!="all" && $input['gender']){
+			$query->where("gender",$input['gender']);
+		}
+		if($input['age_group']!="all" && $input['gender']){
+			$query->where("age_group",$input['age_group']);
+		}
+		$query->groupBy('region');
+		return $query->get();
 	}
+
+
+	public function indexNew()
+	{
+		$input = Input::only('gender', 'age_group');
+		//dd($input);
+		$query = DB::table('tac')
+							->select(DB::raw('count(*) as fatality_count, region'));
+		if($input['gender']!="all" && $input['gender']){
+			$query->where("gender",$input['gender']);
+		}
+		if($input['age_group']!="all" && $input['gender']){
+			$query->where("age_group",$input['age_group']);
+		}
+		$query->groupBy('region');
+		return $query->get();
+	}
+
 
 
 	/**

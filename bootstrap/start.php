@@ -26,7 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead'),
+	'local' => array('10-72-56-52.wifi-f.deakin.edu.au'),
+	'production' => array('areyouroadsafe.com')
 
 ));
 
