@@ -24,6 +24,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
           .orient("left");
 
       var line = d3.svg.line()
+          .interpolate("basis")  
           .x(function(d) { return x(d.year); })
           .y(function(d) { return y(d.ratio); });
 
@@ -58,5 +59,6 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
       svg.append("path")
           .datum(data)
           .attr("class", "line")
+
           .attr("d", line);
   }

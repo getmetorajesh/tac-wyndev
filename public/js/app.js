@@ -231,6 +231,7 @@ $(document).ready(function(){
     });
 
     $.get( "graph", {gender: gender, age_group:age_group}, function( data ) {
+      d3.selectAll("#chart svg").remove();
       updateChart(data);
     });
 
