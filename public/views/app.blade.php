@@ -87,13 +87,13 @@
               </div>
           </div>
       </header> -->
-      <div id="main_content">
-        <script type="text/template" id="tpl_map">
+      <script type="text/template" id="tpl_map">
 
-        </script>
-    </div>
+      </script>
+      <div class="container" id="main_content">
+
       <!-- Main Section -->
-      <section>
+      <section class="col-md-6">
         <form class="form-horizontal">
           <fieldset>
 
@@ -129,22 +129,26 @@
 
 
       </section>
-      <section>
+      <section class="col-md-6">
         <h4>Risk Profile</h4>
+        <span class="profile_image">
+          <i class="fa fa-male"></i>
+        </span>
         <p id="risk_profile">
           Please select your gender and age group.
         </p>
       </section>
-      <section>
+      <section class="col-md-6">
         <h4> Map</h4>
          <div id="map"></div>
       </section>
 
-      <section  id="chart">
+      <section  id="chart" class="col-md-6">
         <h3>Graph</h3>
         <script type="text/javascript" src="{{ asset('js/line-chart.js') }}">
         </script>
       </section>
+          </div>
       <!-- /Main section -->
 
       <!-- About Section -->

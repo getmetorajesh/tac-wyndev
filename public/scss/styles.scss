@@ -303,7 +303,7 @@ footer .footer-below {
     outline: 0;
 }
 
-#map { height: 600px; width: 60%; margin:0px auto;}
+#map { height: 600px;  margin:0px auto;}
 
 .axis path,
 .axis line {
@@ -320,4 +320,8 @@ footer .footer-below {
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
+}
+
+#main_content{
+  margin:100px;
 }

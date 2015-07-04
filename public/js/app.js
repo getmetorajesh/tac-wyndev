@@ -24,7 +24,7 @@
   });
 
   App.Views.TacMap = Backbone.View.extend({
-    el:$("#main_content"),
+    el:$("#main_content1"),
     tagName: 'li',
         template: _.template($("#tpl_map").html()),
         initialize: function(){
