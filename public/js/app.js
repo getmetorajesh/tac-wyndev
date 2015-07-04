@@ -211,16 +211,33 @@ $(document).ready(function(){
               return { color: getColor(index) };
         }
 
-
+        function updateRiskProfile(data){
+          var area_type = data.area_type.area_type;
+          var day_type =data.day_type.day_type;
+          var time_type = data.time_type.time_type;
+          var age_type = data.age_type.age_type;
+          var road_crash_type = data.road_crash_type.road_crash_type;
+          var str = "Your personalised driver aware profile advises that you take extra care when driving in "+area_type+", especially when driving on "+day_type+" and driving during the "+time_type+". "+age_type+" that are need to be particularly aware "+road_crash_type+". ";
+          $("#risk_profile").text(str);
+        }
 
   $('input[name="frm_gender"]:radio, select[name="frm_age"]').on('change', function() {
-    gender = ("#frm_gender").value;
-    age = ("#frm_age").value;
+    var gender = $("input[name='frm_gender']").val();
+    var age_group = $("#frm_age :selected").text();
     console.log("ccca");
-    $.get( "tac", {gender: gender, age_group:age}, function( data ) {
+    $.get( "tac", {gender: gender, age_group:age_group}, function( data ) {
       removeAllLayers();
       refreshMap(data);
     });
+
+    $.get( "graph", {gender: gender, age_group:age_group}, function( data ) {
+      updateChart(data);
+    });
+
+    $.get( "riskProfile", {gender: gender, age_group:age_group}, function( data ) {
+      updateRiskProfile(data);
+    });
+
   });
 
 });

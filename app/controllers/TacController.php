@@ -36,7 +36,7 @@ class TacController extends \BaseController {
 			if($input['gender']!="all" && $input['gender']){
 				$query->where("gender",$input['gender']);
 			}
-			if($input['age_group']!="all" && $input['gender']){
+			if($input['age_group']!="all" && $input['age_group']){
 				$query->where("age_group",$input['age_group']);
 			}
 
@@ -54,11 +54,11 @@ class TacController extends \BaseController {
 		$input = Input::only('gender', 'age_group');
 		$query = DB::table('result_set')
 							->select("*");
-		if($input['gender']!="all" && $input['gender']){
-			$query->where("gender",$input['gender']);
+		if($input['gender']!="all" && isset($input['gender'])){
+			$query->where("gender",$input["gender"]);
 		}
-		if($input['age_group']!="all" && $input['gender']){
-			$query->where("age_group",$input['age_group']);
+		if($input['age_group']!="all" && $input['age_group']!=0){
+			$query->where("age",$input['age_group']);
 		}
 
 		$query->orderBy('year', 'ASC');

@@ -20,6 +20,8 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -103,11 +105,11 @@
             <label class="col-md-4 control-label" for="frm_gender">Gender</label>
             <div class="col-md-4">
               <label class="radio-inline" for="frm_gender-0">
-                <input type="radio" name="frm_gender" id="frm_gender-0" value="male" checked="checked">
+                <input type="radio" name="frm_gender" id="frm_gender-0" value="MALE" checked="checked">
                 Male
               </label>
               <label class="radio-inline" for="frm_gender-1">
-                <input type="radio" name="frm_gender" id="frm_gender-1" value="female">
+                <input type="radio" name="frm_gender" id="frm_gender-1" value="FEMALE">
                 Female
               </label>
             </div>
@@ -127,11 +129,22 @@
 
 
       </section>
-
       <section>
+        <h4>Risk Profile</h4>
+        <p id="risk_profile">
+          Please select your gender and age group.
+        </p>
+      </section>
+      <section>
+        <h4> Map</h4>
          <div id="map"></div>
       </section>
 
+      <section  id="chart">
+        <h3>Graph</h3>
+        <script type="text/javascript" src="{{ asset('js/line-chart.js') }}">
+        </script>
+      </section>
       <!-- /Main section -->
 
       <!-- About Section -->
