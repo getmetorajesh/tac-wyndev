@@ -82,7 +82,7 @@
 }(this, jQuery, Backbone));
 
 
-var map = L.map('map').setView([37.8, -96], 4);
+var map = L.map('map').setView([-37.8, 144.96], 5);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
