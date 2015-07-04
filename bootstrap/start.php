@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('10-72-56-52.wifi-f.deakin.edu.au'),
+	'local' => array('10-72-56-52.wifi-f.deakin.edu.au','10-72-56-52.wifi-f.deakin.edu.au','Preethis-MacBook-Pro.local'),
 	'production' => array('areyouroadsafe.com')
 
 ));

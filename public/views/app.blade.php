@@ -39,7 +39,6 @@
 
 
   <body id="page-top" class="index">
-
       <!-- Navigation -->
       <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
@@ -86,7 +85,11 @@
               </div>
           </div>
       </header> -->
+      <div id="main_content">
+        <script type="text/template" id="tpl_map">
 
+        </script>
+    </div>
       <!-- Main Section -->
       <section>
         <form class="form-horizontal">
@@ -114,10 +117,8 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="frm_age">Age Group</label>
             <div class="col-md-4">
-              <select id="frm_age" name="frm_age" class="form-control">
-                <option value="18-21">18-21</option>
-                <option value="22-26">22-26</option>
-              </select>
+              <?php $age_group = array( '0-4','5-15','16-17', '18-20', '21-25',  '26-29', '30-39','40-49','60-69', '70+', '50-59',  'UNKNOWN');?>
+              {{ Form::select('frm_age', $age_group, null, array('class'=>'form-control', 'id'=>'frm_age','name'=>'frm_age')) }}
             </div>
           </div>
 

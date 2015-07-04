@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('app');
 });
 
 Route::get('/u', function()
@@ -22,7 +22,8 @@ Route::get('/u', function()
   return View::make('app');
 });
 
-Route::get('tacProfile', 'TacController@indexNew');
+Route::get('riskProfile', 'TacController@riskProfile');
+Route::get('graph', 'TacController@graph');
 
 
 Route::resource('tac', 'TacController');
