@@ -30,8 +30,6 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
           .x(function(d) { return x(d.year); })
           .y(function(d) { return y(d.ratio); });
 
-
-
       var svg = d3.select("body #chart").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
@@ -42,10 +40,24 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
         d.ratio = +d.ratio;
       });
 
-      svg.selectAll(".x.axis text")  // select all the text elements for the xaxis
-          .attr("transform", function(d) {
-              return "translate(" + this.getBBox().height*-2 + "," + this.getBBox().height + ")rotate(-45)";
-        });
+      // function for the x grid lines
+function make_x_axis() {
+  return d3.svg.axis()
+      .scale(x)
+      .orient("bottom")
+      .ticks(5);
+}
+
+
+      svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + height + ")")
+        .call(make_x_axis()
+            .tickSize(-height, 0, 0)
+            .tickFormat("")
+        );
+
+
 
       x.domain(d3.extent(data, function(d) { return d.year; }));
       y.domain(d3.extent(data, function(d) { return d.ratio; }));
@@ -68,6 +80,5 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
       svg.append("path")
           .datum(data)
           .attr("class", "line")
-
           .attr("d", line);
   }
