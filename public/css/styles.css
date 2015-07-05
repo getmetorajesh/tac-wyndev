@@ -303,7 +303,9 @@ h3 {
 .profile_highlights5 {
   background-color: #FFA500; }
 
-.black h2, .black h3, .black h4 {
-  color: #fff; }
-.black h4 {
-  font-size: 19px; }
+.black {
+  color: #959fac; }
+  .black h2, .black h3, .black h4 {
+    color: #fff; }
+  .black h4 {
+    font-size: 19px; }

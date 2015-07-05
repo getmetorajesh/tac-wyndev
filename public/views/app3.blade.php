@@ -196,12 +196,12 @@
 
     <div class="container" id="">
       <section class="col-md-6">
-        <h4>Map</h4><hr>
+        <h4>Number of fatalities across Victorian regions</h4><hr>
          <div id="map"></div>
       </section>
 
       <section  id="chart" class="col-md-6">
-        <h4>Graph</h4><hr>
+        <h4>Number of fatalities per 100K in population</h4><hr>
         <script type="text/javascript" src="{{ asset('js/line-chart.js') }}">
         </script>
       </section>

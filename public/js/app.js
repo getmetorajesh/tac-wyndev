@@ -3,8 +3,9 @@ $(document).ready(function(){
     var colors = ["#8c2d04", "#d94801", "#f16913", "#fd8d3c", "#fdae6b", "#fdd0a2", "#fee6ce", "#fff5eb"];
     var map = L.map('map').setView([-37.8, 144.96], 6);
     var age_group = [ '16-17', '18-20', '21-25',  '26-29', '30-39','40-49','50-59','60-69', '70+' ];
-    		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+    		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     			maxZoom: 18,
+          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     			id: 'examples.map-20v6611k'
     		}).addTo(map);
 
@@ -34,6 +35,10 @@ $(document).ready(function(){
             return colors[7];
           }
     		}
+
+        function getRegion(i){
+          return resultData[i].region;
+        }
 
 
     		function highlightFeature(e) {
@@ -85,10 +90,10 @@ $(document).ready(function(){
         			for (var i = 0; i < grades.length; i++) {
         				from = grades[i];
         				to = grades[i + 1];
-
+                getRegion(i);
         				labels.push(
         					'<i style="background:' + getColor(i) + '"></i> ' +
-        					from);
+        					from+" - "+getRegion(i));
         			}
 
         			div.innerHTML = labels.join('<br>');
@@ -111,7 +116,6 @@ $(document).ready(function(){
             var customLayer = L.geoJson(null, {
                 style:getFeatureStyle(i)
               });
-              console.log(oneD);
             var  kml = oneD.region;
             var ds = kml.replace(/ /g,"")+".kml";
             var obj = {customLayer:customLayer, kml_file:ds};
@@ -161,7 +165,8 @@ $(document).ready(function(){
     $.get( "tac", {gender: gender, age_group:age_group}, function( data ) {
       removeAllLayers();
       // update grades global
-      grades=[];
+      grades= resultData=[];
+      resultData = data;
       updateGrades(data);
 
       legend.removeFrom(map);
