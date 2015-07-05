@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    <link rel="icon" type="image/ico" href="{{ asset('images/favicon.ico')}}" />
 
-    <title>Govhack 2015 - Wyndev</title>
+    <title>Are you road safe - Govhack 2015</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('js/headereffects/css/component.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('js/headereffects/css/normalize.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('js/pace/pace-theme-flash.css') }}" media="screen"/>
@@ -210,6 +211,16 @@
       		<div class="container">
       			<div class="p-t-30 p-b-50">
       				<div class="row">
+                <div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
+      						<div class="bold footer_logo"><img height="50px" src="{{ asset('images/govhack-logo.png') }}"/></div>
+      					</div>
+                <div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
+      						<div class="bold footer_logo"><img height="50px" src="{{ asset('images/tac-logo.png') }}"/></div>
+      					</div>
+                <div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
+      						<div class="bold footer_logo"><img height="50px" src="{{ asset('images/wyndev-logo@2x.png') }}"/></div>
+      					</div>
+
       					<div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
       						<div class="bold">THE TEAM</div>
       						Adam Mowlam<br>
@@ -221,14 +232,6 @@
       						Kumica Truong<br>
       						Graeme Bernard<br>
       						Paul Lowery
-      					</div>
-      					<div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
-      						<div class="bold">GOVHACK 2015</div>
-      						xxx
-      					</div>
-      					<div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 ">
-      						<div class="bold">&nbsp;</div>
-
       					</div>
       				</div>
       				<!--<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 xs-m-b-20">
@@ -249,7 +252,6 @@
 
     <!-- jQuery -->
     <script src="{{ asset('bower_components/jquery/dist/jquery.js') }}"></script>
-
 
     <script src="{{ asset('js/jquery-unveil/jquery.unveil.min.js') }}"></script>
     <script src="{{ asset('js/jquery-appear/jquery.appear.js') }}"></script>

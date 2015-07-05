@@ -255,8 +255,9 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
-  background-image: url('../images/bg/bg2.jpg');
-  height: 200px;
+  //background-image: url('../images/bg/bg2.jpg');
+  background-color: #fff;
+  height: 180px;
   background-attachment: fixed;
   background-size: cover;
     color: #505458;
@@ -279,7 +280,9 @@ footer .footer-below {
     padding: 25px 0;
     background-color: #233140;
 }
-
+.footer_logo{
+  text-align: center;
+}
 
 .btn:focus,
 .btn:active,
