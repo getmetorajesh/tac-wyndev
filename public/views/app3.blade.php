@@ -90,10 +90,12 @@
     <div class="section table-layout">
     			<div id="working-section" class="table-cell v-middle">
     				<div >
-    				<h2 class="text-center custom-font no-margin"> Are you <br/> road safe? </h2>
+    				<h2 class="text-center custom-font no-margin"> ARE YOU <br/> ROAD SAFE? </h2>
     				</div>
     			</div>
     </div>
+
+
     <div class="section white">
     		<div class="container">
     			<div class="p-t-60 p-b-50 ">
@@ -126,7 +128,7 @@
     						</div>
     					</div>
     				</div>
-    						<div class="row">
+    						<div class="row text-center">
 
     			<h4>
     			More Australians have died on our roads than all the wars combined; more than all the people in Geelong. In fact, if they all held hands the formed line would stretch from Melbourne, along the Greater Ocean Road to Warrnambool. </h4>
@@ -140,18 +142,18 @@
     			</div>
     		</div>
     </div>
+
+    <div class="section black text-center">
       <div class="container" id="">
 
       <!-- Main Section -->
-      <div class="col-md-12">
-      <section class="col-md-6">
+      <div class="col-md-12 text-center">
+      <section class="col-md-12">
         <form class="form-horizontal">
           <fieldset>
 
           <!-- Form Name -->
-          <h4>Your profile</h4>
-          <hr>
-
+          <h3>Statistics show that different driver groups (sex, age) are more at risk in certain situations. <br/> Find out your crash profile:</h3>
           <!-- Multiple Radios (inline) -->
           <div class="form-group">
             <label class="col-md-4 control-label" for="frm_gender">Gender</label>
@@ -179,19 +181,20 @@
           </fieldset>
           </form>
       </section>
-      <section class="col-md-6">
-        <h4>Risk Profile</h4>
-        <hr>
+      <section class="col-md-12">
+        <h3>Risk Profile</h3>
         <span class="profile_image2">
         <!--  <i class="fa fa-mal2e"></i>-->
         </span>
-        <p id="risk_profile">
+        <p id="risk_profile" class="text-center">
           Please select your gender and age group.
         </p>
       </section>
     </div>
+    </div>
+  </div>
 
-
+    <div class="container" id="">
       <section class="col-md-6">
         <h4>Map</h4><hr>
          <div id="map"></div>

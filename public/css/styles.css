@@ -21,15 +21,6 @@ a.active {
   outline: 0;
   color: #18bc9c; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif; }
-
 header {
   text-align: center;
   color: #fff;
@@ -260,8 +251,9 @@ footer .footer-below {
   shape-rendering: crispEdges; }
 
 #risk_profile {
-  font-size: 12px;
-  line-height: 26px; }
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center; }
 
 .x.axis path {
   display: none; }
@@ -310,3 +302,8 @@ h3 {
 
 .profile_highlights5 {
   background-color: #FFA500; }
+
+.black h2, .black h3, .black h4 {
+  color: #fff; }
+.black h4 {
+  font-size: 19px; }
