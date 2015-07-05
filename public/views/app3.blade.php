@@ -170,7 +170,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="frm_age">Age Group</label>
             <div class="col-md-4">
-              <?php $age_group = array( '0-4','5-15','16-17', '18-20', '21-25',  '26-29', '30-39','40-49', '50-59','60-69', '70+',  'UNKNOWN');?>
+              <?php $age_group = array('16-17', '18-20', '21-25',  '26-29', '30-39','40-49', '50-59','60-69', '70+');?>
               {{ Form::select('frm_age', $age_group, null, array('class'=>'form-control', 'id'=>'frm_age','name'=>'frm_age')) }}
             </div>
           </div>
