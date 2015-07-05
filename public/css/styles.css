@@ -28,8 +28,7 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 700; }
+  font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 header {
   text-align: center;
@@ -47,7 +46,7 @@ header img {
 header .intro-text .name {
   display: block;
   text-transform: uppercase;
-  font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Montserrat","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2em;
   font-weight: 700; }
 
@@ -208,6 +207,7 @@ form .row:first-child .floating-label-form-group {
   background-image: url("../images/bg/bg2.jpg");
   height: 200px;
   background-attachment: fixed;
+  background-size: cover;
   color: #505458; }
 
 footer h3 {

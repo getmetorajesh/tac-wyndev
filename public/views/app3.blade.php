@@ -67,7 +67,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>-->
-              <a href="#" class="navbar-brand compressed"><img src="{{ asset('images/wyndev-logo@2x.png') }}" alt="" data-src="{{ asset('images/wyndev-logo.png@2x') }}" data-src-retina="{{ asset('images/wyndev-logo@2x.png') }}" width="190" height="75" class="pull-right" /></a>
+              <a href="#" class="navbar-brand compressed">
+                <!--<img src="{{ asset('images/wyndev-logo@2x.png') }}" alt="" data-src="{{ asset('images/wyndev-logo.png@2x') }}"
+                data-src-retina="{{ asset('images/wyndev-logo@2x.png') }}" width="190" height="75" class="pull-right" />
+              -->
+                </a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-left" >
@@ -85,7 +89,7 @@
     <div class="section table-layout">
     			<div id="working-section" class="table-cell v-middle">
     				<div >
-    				<h2 class="text-center custom-font no-margin">Road crashes are a major cause of death and injury. </h2>
+    				<h2 class="text-center custom-font no-margin"> Are you <br/> road safe? </h2>
     				</div>
     			</div>
     </div>
