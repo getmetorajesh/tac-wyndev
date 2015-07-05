@@ -2,7 +2,7 @@
 $(document).ready(function(){
     var colors = ["#8c2d04", "#d94801", "#f16913", "#fd8d3c", "#fdae6b", "#fdd0a2", "#fee6ce", "#fff5eb"];
     var map = L.map('map').setView([-37.8, 144.96], 6);
-    var age_group = [ '0-4','5-15','16-17', '18-20', '21-25',  '26-29', '30-39','40-49','60-69', '70+', '50-59',  'UNKNOWN'];
+    var age_group = [ '16-17', '18-20', '21-25',  '26-29', '30-39','40-49','50-59','60-69', '70+' ];
     		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
     			maxZoom: 18,
     			id: 'examples.map-20v6611k'
