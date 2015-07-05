@@ -12,7 +12,7 @@
     <link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
     <link href="{{ asset('bower_components/bootstrap3-datepicker/css/datepicker.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('bower_components/leaflet/dist/leaflet.css') }}" rel="stylesheet" type="text/css">
@@ -74,31 +74,19 @@
           <!-- /.container-fluid -->
       </nav>
 
-      <!-- Header -->
-      <!-- <header>
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <img class="img-responsive" src="" alt="">
-                      <div class="intro-text">
-                          <span class="name"></span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </header> -->
-      <script type="text/template" id="tpl_map">
 
-      </script>
+
       <div class="container" id="main_content">
 
       <!-- Main Section -->
+      <div class="col-md-12">
       <section class="col-md-6">
         <form class="form-horizontal">
           <fieldset>
 
           <!-- Form Name -->
-          <legend>Your profile</legend>
+          <h4>Your profile</h4>
+          <hr>
 
           <!-- Multiple Radios (inline) -->
           <div class="form-group">
@@ -119,18 +107,17 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="frm_age">Age Group</label>
             <div class="col-md-4">
-              <?php $age_group = array( '0-4','5-15','16-17', '18-20', '21-25',  '26-29', '30-39','40-49','60-69', '70+', '50-59',  'UNKNOWN');?>
+              <?php $age_group = array( '0-4','5-15','16-17', '18-20', '21-25',  '26-29', '30-39','40-49', '50-59','60-69', '70+',  'UNKNOWN');?>
               {{ Form::select('frm_age', $age_group, null, array('class'=>'form-control', 'id'=>'frm_age','name'=>'frm_age')) }}
             </div>
           </div>
 
           </fieldset>
           </form>
-
-
       </section>
       <section class="col-md-6">
         <h4>Risk Profile</h4>
+        <hr>
         <span class="profile_image">
           <i class="fa fa-male"></i>
         </span>
@@ -138,20 +125,23 @@
           Please select your gender and age group.
         </p>
       </section>
+    </div>
+
+
       <section class="col-md-6">
-        <h4> Map</h4>
+        <h4>Map</h4><hr>
          <div id="map"></div>
       </section>
 
       <section  id="chart" class="col-md-6">
-        <h3>Graph</h3>
+        <h4>Graph</h4><hr>
         <script type="text/javascript" src="{{ asset('js/line-chart.js') }}">
         </script>
       </section>
-          </div>
       <!-- /Main section -->
 
       <!-- About Section -->
+    </div>
       <section class="success" id="about">
           <div class="container">
               <div class="row">

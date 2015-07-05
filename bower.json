@@ -24,6 +24,7 @@
     "spin.js": "~2.0.2",
     "bootstrap3-datepicker": "~1.2.1",
     "moment": "~2.10.2",
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7.3",
+    "font-awesome": "~4.3.0"
   }
 }

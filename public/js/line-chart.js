@@ -1,6 +1,6 @@
 
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
+    width = 600 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 
@@ -17,6 +17,8 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 
       var xAxis = d3.svg.axis()
           .scale(x)
+          .ticks(10)
+        //  .tickFormat(function(d) { console.log(d); return "dasd"; })
           .orient("bottom");
 
       var yAxis = d3.svg.axis()
@@ -24,9 +26,11 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
           .orient("left");
 
       var line = d3.svg.line()
-          .interpolate("basis")  
+          .interpolate("basis")
           .x(function(d) { return x(d.year); })
           .y(function(d) { return y(d.ratio); });
+
+
 
       var svg = d3.select("body #chart").append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -37,6 +41,11 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
         d.year = parseDate(d.year);
         d.ratio = +d.ratio;
       });
+
+      svg.selectAll(".x.axis text")  // select all the text elements for the xaxis
+          .attr("transform", function(d) {
+              return "translate(" + this.getBBox().height*-2 + "," + this.getBBox().height + ")rotate(-45)";
+        });
 
       x.domain(d3.extent(data, function(d) { return d.year; }));
       y.domain(d3.extent(data, function(d) { return d.ratio; }));
@@ -54,7 +63,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
           .attr("y", 6)
           .attr("dy", ".71em")
           .style("text-anchor", "end")
-          .text("Ratio (%)");
+          .text("Incidence(persons per 100K)");
 
       svg.append("path")
           .datum(data)

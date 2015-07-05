@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('app');
+	return View::make('app3');
 });
 
 Route::get('/u', function()
